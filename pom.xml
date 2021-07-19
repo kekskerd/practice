@@ -23,11 +23,22 @@
     <allure.testng>2.13.9</allure.testng>
     <aeonbits.owner>1.0.4</aeonbits.owner>
     <aspectj.version>1.9.6</aspectj.version>
-    <slf4j-nop.version>1.7.13</slf4j-nop.version>
+    <slf4j.version>1.7.13</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20090211</version>
+    </dependency>
 
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -65,18 +76,6 @@
     </dependency>
 
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-nop</artifactId>
-      <version>${slf4j-nop.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>${log4j.version}</version>
-    </dependency>
-
-    <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>${testng.version}</version>
@@ -104,6 +103,13 @@
       <artifactId>webdrivermanager</artifactId>
       <version>${webdriver.manager}</version>
       <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>4.3.3</version>
+      <scope>test</scope>
     </dependency>
 
   </dependencies>
